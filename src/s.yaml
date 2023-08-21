@@ -211,8 +211,6 @@ services:
         memorySize: 3072
         cpu: 2.0
         diskSize: 512
-
-  
         environmentVariables:
           NODE_PATH: /opt/nodejs/node_modules
           PATH: >-
