@@ -1,0 +1,5 @@
+{
+  "/api/config/route": "/api/config",
+  "/api/openai/[...path]/route": "/api/openai/[...path]",
+  "/page": "/"
+}

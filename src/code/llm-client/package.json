@@ -12,7 +12,6 @@
     "app:dev": "yarn tauri dev",
     "app:build": "yarn tauri build",
     "prompts": "node ./scripts/fetch-prompts.mjs",
-    "prepare": "husky install",
     "proxy-dev": "sh ./scripts/init-proxy.sh && proxychains -f ./scripts/proxychains.conf yarn dev"
   },
   "dependencies": {
