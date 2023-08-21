@@ -1,6 +1,6 @@
 
 Type: Application
-Name: fc-ll-api
+Name: fc-llm-api
 Provider:
   - 阿里云
 Version: dev
@@ -14,7 +14,7 @@ Parameters:
   additionalProperties: false # 不允许增加其他属性
   required: # 必填项
     - region
-    - imageUrl
+    - llmModel
   properties:
     region:
       title: 地域
