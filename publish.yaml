@@ -33,7 +33,7 @@ Parameters:
       description: 选择基础的大语言模型
       enum:
         - chatglm2-6b-int4
-        - llama2-7b-q2k
+        - llama2-13b-q4
         - qwen-7b-chat
     serviceName:
       title: 服务名

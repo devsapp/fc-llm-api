@@ -74,19 +74,12 @@ async function downloadQwen(region, callback) {
     })
 
 
-
-    const modelFile = path.join(nasModelPath, filename);
-    if (fs.existsSync(modelFile)) {
-      result = 'file already exist'
-    } else {
-        try {
-            const all = await Promise.all(downloadPrepareList)
-            console.log(all)
-            result = 'download qwen success'
-        } catch (e) {
-            result = e;
-        }
-
+    try {
+        const all = await Promise.all(downloadPrepareList)
+        console.log(all)
+        result = 'download qwen success'
+    } catch (e) {
+        result = e;
     }
     return result
 }
