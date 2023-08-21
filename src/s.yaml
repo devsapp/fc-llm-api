@@ -54,7 +54,7 @@ services:
         {{ if llmModel !== 'llama2-7b-q2k' }} 
         caPort: 7860
         {{/if}}
-        {{ if llmModel !== 'llama2-7b-q2k' }} 
+        {{ if llmModel === 'llama2-7b-q2k' }} 
         caPort: 8089
         {{/if}}
         instanceType: fc.gpu.ampere.1
