@@ -981,7 +981,7 @@ var client = __webpack_require__(9463);
 const Markdown = app_dynamic_default()(async ()=>(await Promise.all(/* import() */[__webpack_require__.e(7449), __webpack_require__.e(8914)]).then(__webpack_require__.bind(__webpack_require__, 8914))).Markdown, {
     loadableGenerated: {
         modules: [
-            "/Users/hanxie/opensource/devsapp/fc-llm-api/src/code/llm-client/app/components/exporter.tsx -> " + "./markdown"
+            "/Users/hanxie/localproject/s-app/fc-llm-api@dev/code/llm-client/app/components/exporter.tsx -> " + "./markdown"
         ]
     },
     loading: ()=>/*#__PURE__*/ jsx_runtime_.jsx(three_dots/* default */.Z, {})
@@ -1570,7 +1570,7 @@ function JsonPreviewer(props) {
 const chat_Markdown = app_dynamic_default()(async ()=>(await Promise.all(/* import() */[__webpack_require__.e(7449), __webpack_require__.e(8914)]).then(__webpack_require__.bind(__webpack_require__, 8914))).Markdown, {
     loadableGenerated: {
         modules: [
-            "/Users/hanxie/opensource/devsapp/fc-llm-api/src/code/llm-client/app/components/chat.tsx -> " + "./markdown"
+            "/Users/hanxie/localproject/s-app/fc-llm-api@dev/code/llm-client/app/components/chat.tsx -> " + "./markdown"
         ]
     },
     loading: ()=>/*#__PURE__*/ jsx_runtime_.jsx(three_dots/* default */.Z, {})

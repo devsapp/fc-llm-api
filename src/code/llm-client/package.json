@@ -41,7 +41,7 @@
     "zustand": "^4.3.8"
   },
   "devDependencies": {
-   
+    
   },
   "resolutions": {
     "lint-staged/yaml": "^2.2.2"

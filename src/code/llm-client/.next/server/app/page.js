@@ -1098,7 +1098,7 @@ var SvgThreeDots = function SvgThreeDots(props) {
 
 /***/ }),
 
-/***/ 7496:
+/***/ 342:
 /***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
 
 "use strict";
@@ -1123,17 +1123,17 @@ __webpack_require__.r(__webpack_exports__);
         '',
         {
         children: ['__PAGE__', {}, {
-          page: [() => Promise.resolve(/* import() eager */).then(__webpack_require__.bind(__webpack_require__, 895)), "/Users/hanxie/opensource/devsapp/fc-llm-api/src/code/llm-client/app/page.tsx"],
+          page: [() => Promise.resolve(/* import() eager */).then(__webpack_require__.bind(__webpack_require__, 895)), "/Users/hanxie/localproject/s-app/fc-llm-api@dev/code/llm-client/app/page.tsx"],
           
         }]
       },
         {
-          'layout': [() => Promise.resolve(/* import() eager */).then(__webpack_require__.bind(__webpack_require__, 5818)), "/Users/hanxie/opensource/devsapp/fc-llm-api/src/code/llm-client/app/layout.tsx"],
+          'layout': [() => Promise.resolve(/* import() eager */).then(__webpack_require__.bind(__webpack_require__, 5818)), "/Users/hanxie/localproject/s-app/fc-llm-api@dev/code/llm-client/app/layout.tsx"],
           
         }
       ]
       }.children;
-    const pages = ["/Users/hanxie/opensource/devsapp/fc-llm-api/src/code/llm-client/app/page.tsx"];
+    const pages = ["/Users/hanxie/localproject/s-app/fc-llm-api@dev/code/llm-client/app/page.tsx"];
     
     const originalPathname = "/page"
     const __next_app__ = {
@@ -1147,7 +1147,7 @@ __webpack_require__.r(__webpack_exports__);
 
 /***/ }),
 
-/***/ 4093:
+/***/ 142:
 /***/ ((__unused_webpack_module, __unused_webpack_exports, __webpack_require__) => {
 
 Promise.resolve(/* import() eager */).then(__webpack_require__.bind(__webpack_require__, 9476));
@@ -1155,20 +1155,20 @@ Promise.resolve(/* import() eager */).then(__webpack_require__.bind(__webpack_re
 
 /***/ }),
 
-/***/ 7368:
+/***/ 2965:
 /***/ (() => {
 
 
 
 /***/ }),
 
-/***/ 494:
+/***/ 2162:
 /***/ ((__unused_webpack_module, __unused_webpack_exports, __webpack_require__) => {
 
-Promise.resolve(/* import() eager */).then(__webpack_require__.t.bind(__webpack_require__, 8709, 23));
 Promise.resolve(/* import() eager */).then(__webpack_require__.t.bind(__webpack_require__, 2698, 23));
 Promise.resolve(/* import() eager */).then(__webpack_require__.t.bind(__webpack_require__, 7833, 23));
 Promise.resolve(/* import() eager */).then(__webpack_require__.t.bind(__webpack_require__, 9150, 23));
+Promise.resolve(/* import() eager */).then(__webpack_require__.t.bind(__webpack_require__, 8709, 23));
 Promise.resolve(/* import() eager */).then(__webpack_require__.t.bind(__webpack_require__, 7734, 23))
 
 /***/ }),
@@ -1853,7 +1853,7 @@ var ui_lib = __webpack_require__(4552);
 const ChatList = app_dynamic_default()(async ()=>(await Promise.all(/* import() */[__webpack_require__.e(480), __webpack_require__.e(1423), __webpack_require__.e(5096), __webpack_require__.e(4823), __webpack_require__.e(2544)]).then(__webpack_require__.bind(__webpack_require__, 2544))).ChatList, {
     loadableGenerated: {
         modules: [
-            "/Users/hanxie/opensource/devsapp/fc-llm-api/src/code/llm-client/app/components/sidebar.tsx -> " + "./chat-list"
+            "/Users/hanxie/localproject/s-app/fc-llm-api@dev/code/llm-client/app/components/sidebar.tsx -> " + "./chat-list"
         ]
     },
     loading: ()=>null
@@ -2147,7 +2147,7 @@ function Loading(props) {
 const Settings = app_dynamic_default()(async ()=>(await Promise.all(/* import() */[__webpack_require__.e(480), __webpack_require__.e(5971), __webpack_require__.e(1621), __webpack_require__.e(5096), __webpack_require__.e(8401), __webpack_require__.e(6959)]).then(__webpack_require__.bind(__webpack_require__, 6959))).Settings, {
     loadableGenerated: {
         modules: [
-            "/Users/hanxie/opensource/devsapp/fc-llm-api/src/code/llm-client/app/components/home.tsx -> " + "./settings"
+            "/Users/hanxie/localproject/s-app/fc-llm-api@dev/code/llm-client/app/components/home.tsx -> " + "./settings"
         ]
     },
     loading: ()=>/*#__PURE__*/ jsx_runtime_.jsx(Loading, {
@@ -2157,7 +2157,7 @@ const Settings = app_dynamic_default()(async ()=>(await Promise.all(/* import() 
 const Chat = app_dynamic_default()(async ()=>(await Promise.all(/* import() */[__webpack_require__.e(480), __webpack_require__.e(1423), __webpack_require__.e(5971), __webpack_require__.e(5436), __webpack_require__.e(5096), __webpack_require__.e(4823), __webpack_require__.e(8401), __webpack_require__.e(8286), __webpack_require__.e(8402)]).then(__webpack_require__.bind(__webpack_require__, 8402))).Chat, {
     loadableGenerated: {
         modules: [
-            "/Users/hanxie/opensource/devsapp/fc-llm-api/src/code/llm-client/app/components/home.tsx -> " + "./chat"
+            "/Users/hanxie/localproject/s-app/fc-llm-api@dev/code/llm-client/app/components/home.tsx -> " + "./chat"
         ]
     },
     loading: ()=>/*#__PURE__*/ jsx_runtime_.jsx(Loading, {
@@ -2167,7 +2167,7 @@ const Chat = app_dynamic_default()(async ()=>(await Promise.all(/* import() */[_
 const NewChat = app_dynamic_default()(async ()=>(await Promise.all(/* import() */[__webpack_require__.e(480), __webpack_require__.e(1423), __webpack_require__.e(5096), __webpack_require__.e(4823), __webpack_require__.e(8286), __webpack_require__.e(2000)]).then(__webpack_require__.bind(__webpack_require__, 2000))).NewChat, {
     loadableGenerated: {
         modules: [
-            "/Users/hanxie/opensource/devsapp/fc-llm-api/src/code/llm-client/app/components/home.tsx -> " + "./new-chat"
+            "/Users/hanxie/localproject/s-app/fc-llm-api@dev/code/llm-client/app/components/home.tsx -> " + "./new-chat"
         ]
     },
     loading: ()=>/*#__PURE__*/ jsx_runtime_.jsx(Loading, {
@@ -2177,7 +2177,7 @@ const NewChat = app_dynamic_default()(async ()=>(await Promise.all(/* import() *
 const MaskPage = app_dynamic_default()(async ()=>(await Promise.all(/* import() */[__webpack_require__.e(480), __webpack_require__.e(1423), __webpack_require__.e(5096), __webpack_require__.e(4823)]).then(__webpack_require__.bind(__webpack_require__, 4823))).MaskPage, {
     loadableGenerated: {
         modules: [
-            "/Users/hanxie/opensource/devsapp/fc-llm-api/src/code/llm-client/app/components/home.tsx -> " + "./mask"
+            "/Users/hanxie/localproject/s-app/fc-llm-api@dev/code/llm-client/app/components/home.tsx -> " + "./mask"
         ]
     },
     loading: ()=>/*#__PURE__*/ jsx_runtime_.jsx(Loading, {
@@ -9339,7 +9339,7 @@ var react = __webpack_require__(7159);
 var module_proxy = __webpack_require__(1913);
 ;// CONCATENATED MODULE: ./app/components/home.tsx
 
-const proxy = (0,module_proxy.createProxy)(String.raw`/Users/hanxie/opensource/devsapp/fc-llm-api/src/code/llm-client/app/components/home.tsx`)
+const proxy = (0,module_proxy.createProxy)(String.raw`/Users/hanxie/localproject/s-app/fc-llm-api@dev/code/llm-client/app/components/home.tsx`)
 
 // Accessing the __esModule property and exporting $$typeof are required here.
 // The __esModule getter forces the proxy target to create the default export
@@ -9434,7 +9434,7 @@ async function App() {
 var __webpack_require__ = require("../webpack-runtime.js");
 __webpack_require__.C(exports);
 var __webpack_exec__ = (moduleId) => (__webpack_require__(__webpack_require__.s = moduleId))
-var __webpack_exports__ = __webpack_require__.X(0, [4361], () => (__webpack_exec__(7496)));
+var __webpack_exports__ = __webpack_require__.X(0, [4361], () => (__webpack_exec__(342)));
 module.exports = __webpack_exports__;
 
 })();

@@ -1,4 +1,4 @@
-// File: /Users/hanxie/opensource/devsapp/fc-llm-api/src/code/llm-client/app/api/openai/[...path]/route.ts
+// File: /Users/hanxie/localproject/s-app/fc-llm-api@dev/code/llm-client/app/api/openai/[...path]/route.ts
 import * as entry from '../../../../../../app/api/openai/[...path]/route.js'
 import type { NextRequest } from 'next/server.js'
 

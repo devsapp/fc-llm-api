@@ -1,4 +1,4 @@
-// File: /Users/hanxie/opensource/devsapp/fc-llm-api/src/code/llm-client/app/layout.tsx
+// File: /Users/hanxie/localproject/s-app/fc-llm-api@dev/code/llm-client/app/layout.tsx
 import * as entry from '../../../app/layout.js'
 import type { ResolvingMetadata } from 'next/dist/lib/metadata/types/metadata-interface.js'
 
