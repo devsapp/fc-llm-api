@@ -1,4 +1,0 @@
-{
-  "/api/config": {},
-  "/api/openai/[...path]": {}
-}
