@@ -12,36 +12,6 @@ vars:
     vpcConfig: auto
     internetAccess: true
 services:
-  {{ if llmModel !== 'llama2-7b-q2k' }} 
-  llm-model-download:
-    component: fc
-    actions:
-      pre-deploy: 
-        - run: npm i 
-          path: ./code/source-code/download-model2nas
-      post-deploy: 
-        - component: fc ondemand put --qualifier LATEST --max 1
-        - component: fc invoke --service-name ${vars.service.name}  --function-name llm-model-download 
-        - component: 'fc invoke --service-name ${vars.service.name}  --function-name llm-server --invocation-type async' # 模型下载完然后触发服务启动
-  
-    props:
-      region: ${vars.region} # 关于变量的使用方法，可以参考：https://www.serverless-devs.com/serverless-devs/yaml#变量赋值
-      service: ${vars.service}
-      function:
-        name: "llm-model-download"
-        description: 'download model to nas'
-        codeUri: './code/source-code/download-model2nas'
-        runtime: nodejs16
-        timeout: 600
-        memorySize: 3072
-        cpu: 2.0
-        diskSize: 512
-        instanceConcurrency: 100
-        handler: index.handler
-        environmentVariables:
-          modelName: ${vars.LLM_MODEL}
-          region: ${vars.region}
-  {{/if}}
   llm-server:  #容器服务
     component: fc
     props:
@@ -77,7 +47,7 @@ services:
         memorySize: 32768
         environmentVariables:
           LLM_MODEL: ${vars.LLM_MODEL}
-        gpuMemorySize: 16384
+        gpuMemorySize: 24576
         name: llm-server
         asyncConfiguration: {}
       triggers:
@@ -98,6 +68,36 @@ services:
           protocol: HTTP
           routeConfigs:
             - path: /*
+  {{ if llmModel !== 'llama2-7b-q2k' }} 
+  llm-model-download:
+    component: fc
+    actions:
+      pre-deploy: 
+        - run: npm i 
+          path: ./code/source-code/download-model2nas
+      post-deploy: 
+        - component: fc ondemand put --qualifier LATEST --max 1
+        - component: fc invoke --service-name ${vars.service.name}  --function-name llm-model-download 
+        - component: 'fc invoke --service-name ${vars.service.name}  --function-name llm-server --invocation-type async' # 模型下载完然后触发服务启动
+    props:
+      region: ${vars.region} # 关于变量的使用方法，可以参考：https://www.serverless-devs.com/serverless-devs/yaml#变量赋值
+      service: ${vars.service}
+      function:
+        name: "llm-model-download"
+        description: 'download model to nas'
+        codeUri: './code/source-code/download-model2nas'
+        runtime: nodejs16
+        timeout: 600
+        memorySize: 3072
+        cpu: 2.0
+        diskSize: 512
+        instanceConcurrency: 100
+        handler: index.handler
+        environmentVariables:
+          modelName: ${vars.LLM_MODEL}
+          region: ${vars.region}
+  {{/if}}
+  
   {{ if llmModel !== 'llama2-7b-q2k' }} 
   fc-nas-init:
     component: fc

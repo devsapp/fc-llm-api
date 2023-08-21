@@ -3,7 +3,7 @@ const path = require('path');
 const fs = require('fs-extra');
 const downloads = require('@serverless-devs/downloads').default;
 
-async function downloadChatglm2_6b_int4(region, callback) {
+async function downloadChatglm2_6b_int4(region) {
     const nasModelPath = '/mnt/auto/llm/models/chatglm2-6b-int4';
     const modelUrl = `https://serverless-ai-models-${region}.oss-${region}-internal.aliyuncs.com/chatglm2-6b-int4/pytorch_model.bin`;
     const filename = path.basename(modelUrl);
@@ -11,21 +11,25 @@ async function downloadChatglm2_6b_int4(region, callback) {
         fs.ensureDirSync(nasModelPath);
     }
     const modelFile = path.join(nasModelPath, filename);
+    console.log(modelFile);
+    let result = ''
     if (fs.existsSync(modelFile)) {
-        callback(null, 'fiExist');
+        result = 'file already exist'
     } else {
         try {
             await downloads(modelUrl, {
                 dest: nasModelPath,
                 filename,
-                extract: true
+                extract: false
             });
-            callback(null, 'download chatglm2-6b-int4 success');
+            result = 'download chatglm2-6b-int4 success'
+            // callback(null, 'download chatglm2-6b-int4 success');
         } catch (e) {
-            callback(null, e);
+            result = e;
         }
 
     }
+    return result
 
 }
 
@@ -48,6 +52,7 @@ async function downloadQwen(region, callback) {
     if (!fs.existsSync(nasModelPath)) {
         fs.ensureDirSync(nasModelPath);
     }
+    let result = ''
     const downloadPrepareList = [];
     downloadModelList.forEach((item) => {
         const filename = path.basename(item.modelUrl);
@@ -72,29 +77,33 @@ async function downloadQwen(region, callback) {
 
     const modelFile = path.join(nasModelPath, filename);
     if (fs.existsSync(modelFile)) {
-        callback(null, 'fiExist');
+      result = 'file already exist'
     } else {
         try {
-            await Promise.all(downloadPrepareList)
-            callback(null, 'download qwen success');
+            const all = await Promise.all(downloadPrepareList)
+            console.log(all)
+            result = 'download qwen success'
         } catch (e) {
-            callback(null, e);
+            result = e;
         }
 
     }
-
+    return result
 }
 
 
 exports.handler = async (_event, _context, callback) => {
     const region = process.env.region || 'cn-hangzhou';
     const modelName = process.env.modelName;
-    if (modelName === 'chatglm2-6b') {
-        await downloadChatglm2_6b_int4(region, callback);
+    let result = '';
+    if (modelName === 'chatglm2-6b-int4') {
+        result = await downloadChatglm2_6b_int4(region);
     }
-    
-    if (modelName === 'qwen') {
-        await downloadQwen(region, callback);
+
+    if (modelName === 'qwen-7b-chat') {
+        result = await downloadQwen(region);
     }
+
+    callback(null, result)
 
 }
