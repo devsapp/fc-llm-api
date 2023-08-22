@@ -12,7 +12,7 @@ export function ModelConfigList(props: {
 
   return (
     <>
-      <ListItem title={Locale.Settings.Model}>
+      {/* <ListItem title={Locale.Settings.Model}>
         <Select
           value={props.modelConfig.model}
           onChange={(e) => {
@@ -30,8 +30,8 @@ export function ModelConfigList(props: {
             </option>
           ))}
         </Select>
-      </ListItem>
-      <ListItem
+      </ListItem> */}
+      {/* <ListItem
         title={Locale.Settings.Temperature.Title}
         subTitle={Locale.Settings.Temperature.SubTitle}
       >
@@ -68,7 +68,7 @@ export function ModelConfigList(props: {
             );
           }}
         ></InputRange>
-      </ListItem>
+      </ListItem> */}
       <ListItem
         title={Locale.Settings.MaxTokens.Title}
         subTitle={Locale.Settings.MaxTokens.SubTitle}
@@ -88,7 +88,7 @@ export function ModelConfigList(props: {
           }
         ></input>
       </ListItem>
-      <ListItem
+      {/* <ListItem
         title={Locale.Settings.PresencePenalty.Title}
         subTitle={Locale.Settings.PresencePenalty.SubTitle}
       >
@@ -107,9 +107,9 @@ export function ModelConfigList(props: {
             );
           }}
         ></InputRange>
-      </ListItem>
+      </ListItem> */}
 
-      <ListItem
+      {/* <ListItem
         title={Locale.Settings.FrequencyPenalty.Title}
         subTitle={Locale.Settings.FrequencyPenalty.SubTitle}
       >
@@ -128,7 +128,7 @@ export function ModelConfigList(props: {
             );
           }}
         ></InputRange>
-      </ListItem>
+      </ListItem> */}
 
       <ListItem
         title={Locale.Settings.InjectSystemPrompts.Title}

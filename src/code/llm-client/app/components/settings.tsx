@@ -648,7 +648,7 @@ export function Settings() {
             <></>
           )}
 
-          {!accessStore.hideUserApiKey ? (
+          {/* {!accessStore.hideUserApiKey ? (
             <>
               <ListItem
                 title={Locale.Settings.Endpoint.Title}
@@ -703,7 +703,7 @@ export function Settings() {
                 />
               )}
             </ListItem>
-          ) : null}
+          ) : null} */}
 
           <ListItem
             title={Locale.Settings.CustomModel.Title}
@@ -712,7 +712,7 @@ export function Settings() {
             <input
               type="text"
               value={config.customModels}
-              placeholder="model1,model2,model3"
+              placeholder="chatglm2-6b,qwen,llama2"
               onChange={(e) =>
                 config.update(
                   (config) => (config.customModels = e.currentTarget.value),

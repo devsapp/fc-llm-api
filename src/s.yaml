@@ -14,13 +14,18 @@ vars:
 services:
   llm-server:  #容器服务
     component: fc
+    {{ if llmModel === 'llama2-13b-q4' }} 
+    actions:
+      post-deploy: 
+        - component: 'fc invoke --service-name ${vars.service.name}  --function-name llm-server --invocation-type async' # 模型下载完然后触发服务启动
+    {{/if}}
     props:
       region: ${vars.region}
       service: ${vars.service}
       function:
         handler: index.handler
         timeout: 600
-        diskSize: 512
+        diskSize: 10240
         {{ if llmModel !== 'llama2-13b-q4' }} 
         caPort: 7860
         {{/if}}
@@ -202,7 +207,7 @@ services:
       region: ${vars.region}
       service: ${vars.service}
       function:
-        name: fc-llm-client
+        name: llm-client
         description: 函数计算大模型服务客户端
         timeout: 3000
         layers:
@@ -220,7 +225,7 @@ services:
           BASE_URL: '${llm-server.output.url.system_intranet_url}' # 接入chat server 内部网络
           CODE: 'fc-llm'
         codeUri: ./code/llm-client
-        caPort: 
+        caPort: 3000
       triggers:
         - name: defaultTrigger
           type: http

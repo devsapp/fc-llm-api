@@ -57,19 +57,20 @@ export class ChatGPTApi implements LLMApi {
     const modelConfig = {
       ...useAppConfig.getState().modelConfig,
       ...useChatStore.getState().currentSession().mask.modelConfig,
-      ...{
-        model: options.config.model,
-      },
+      // ...{
+      //   model: options.config.model,
+      // },
     };
-
+    console.log(modelConfig,'modelConfig');
     const requestPayload = {
       messages,
-      stream: options.config.stream,
-      model: modelConfig.model,
-      temperature: modelConfig.temperature,
-      presence_penalty: modelConfig.presence_penalty,
-      frequency_penalty: modelConfig.frequency_penalty,
-      top_p: modelConfig.top_p,
+      stream: true,
+      max_tokens: modelConfig.max_tokens
+      // model: modelConfig.model,
+      // temperature: modelConfig.temperature,
+      // presence_penalty: modelConfig.presence_penalty,
+      // frequency_penalty: modelConfig.frequency_penalty,
+      // top_p: modelConfig.top_p,
     };
 
     console.log("[Request] openai payload: ", requestPayload);
