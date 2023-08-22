@@ -1,5 +1,5 @@
 import webpack from "webpack";
-
+console.log(process.env.BUILD_MODE)
 const mode = process.env.BUILD_MODE ?? "standalone";
 console.log("[Next] build mode", mode);
 
