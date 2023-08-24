@@ -39,7 +39,7 @@ services:
           args: ''
           accelerationType: Default
           {{ if llmModel !== 'llama2-13b-q4' }} 
-          image: 'registry.${vars.region}.aliyuncs.com/serverlessdevshanxie/llm_release:4.0'
+          image: 'registry.${vars.region}.aliyuncs.com/serverlessdevshanxie/llm_release:5.0'
           {{/if}}
           {{ if llmModel === 'llama2-13b-q4' }} 
           image: 'registry.${vars.region}.aliyuncs.com/rocketmq-community/rmq-model-service-cpp-cuda:v3'
