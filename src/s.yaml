@@ -236,12 +236,10 @@ services:
               - DELETE
               - HEAD
               - OPTIONS
-      customDomains:
+       customDomains:
         - domainName: auto
           protocol: HTTP
           routeConfigs:
             - path: /*
-              serviceName: ${vars.service.name}
-              functionName:  fc-llm-client
   
  
