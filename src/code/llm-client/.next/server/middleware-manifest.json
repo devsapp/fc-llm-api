@@ -1,0 +1,47 @@
+{
+  "sortedMiddleware": [],
+  "middleware": {},
+  "functions": {
+    "/api/config/route": {
+      "files": [
+        "server/middleware-build-manifest.js",
+        "server/middleware-react-loadable-manifest.js",
+        "server/next-font-manifest.js",
+        "prerender-manifest.js",
+        "server/edge-runtime-webpack.js",
+        "server/app/api/config/route.js"
+      ],
+      "name": "app/api/config/route",
+      "page": "/api/config/route",
+      "matchers": [
+        {
+          "regexp": "^/api/config$",
+          "originalSource": "/api/config"
+        }
+      ],
+      "wasm": [],
+      "assets": []
+    },
+    "/api/openai/[...path]/route": {
+      "files": [
+        "server/middleware-build-manifest.js",
+        "server/middleware-react-loadable-manifest.js",
+        "server/next-font-manifest.js",
+        "prerender-manifest.js",
+        "server/edge-runtime-webpack.js",
+        "server/app/api/openai/[...path]/route.js"
+      ],
+      "name": "app/api/openai/[...path]/route",
+      "page": "/api/openai/[...path]/route",
+      "matchers": [
+        {
+          "regexp": "^/api/openai/(?<path>.+?)$",
+          "originalSource": "/api/openai/[...path]"
+        }
+      ],
+      "wasm": [],
+      "assets": []
+    }
+  },
+  "version": 2
+}

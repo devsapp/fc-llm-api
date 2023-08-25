@@ -201,8 +201,6 @@ services:
        pre-deploy:
         - run: npm i
           path: ./code/llm-client
-        - run: npm run build
-          path: ./code/llm-client
     props:
       region: ${vars.region}
       service: ${vars.service}
