@@ -35,6 +35,16 @@ Parameters:
         - chatglm2-6b-int4
         - llama2-13b-q4
         - qwen-7b-chat
+    adminEnabled:
+      title: 开启管理后台
+      type: boolean
+      default: false
+      description: 安装kodbox，可以访问启动实例模型及权重文件
+    clientPassword:
+      title: 客户端的访问密码
+      type: password
+      default: 'fc-llm'
+      description: 访问聊天客户端需要的密码默认是fc-llm,您可以自行设置
     serviceName:
       title: 服务名
       type: string

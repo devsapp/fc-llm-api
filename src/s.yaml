@@ -103,7 +103,7 @@ services:
           region: ${vars.region}
   {{/if}}
   
-  {{ if llmModel !== 'llama2-13b-q4' }} 
+  {{ if llmModel !== 'llama2-13b-q4' &&  adminEnabled === true}} 
   fc-nas-init:
     component: fc
     props:
@@ -221,7 +221,7 @@ services:
           PATH: >-
             /opt/nodejs18/bin::/usr/local/bin/apache-maven/bin:/usr/local/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/local/ruby/bin:/opt/bin:/code:/code/bin
           BASE_URL: '${llm-server.output.url.system_intranet_url}' # 接入chat server 内部网络
-          CODE: 'fc-llm'
+          CODE: '{{ clientPassword }}'
         codeUri: ./code/llm-client
         caPort: 3000
       triggers:
