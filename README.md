@@ -106,6 +106,7 @@
 ### 应用详情
 
 使用阿里云函数计算部署开源大模型应用，提供兼容openai规范的接口和[ChatGPT-Next-Web](https://github.com/Yidadaa/ChatGPT-Next-Web)客户端.
+![image.png](https://intranetproxy.alipay.com/skylark/lark/0/2023/png/13970/1693222399152-69e625af-13c9-4d4a-8d68-2b0475921622.png#clientId=u0542e5c1-914e-4&from=paste&height=730&id=ue7c46bb6&originHeight=1460&originWidth=2986&originalType=binary&ratio=2&rotation=0&showTitle=false&size=3207417&status=done&style=none&taskId=ud6ce1730-09f2-407c-8443-9a4723f48ea&title=&width=1493)
 ![image.png](https://intranetproxy.alipay.com/skylark/lark/0/2023/png/13970/1693221028075-582cc6e4-9728-4703-bde7-911bc3c6b00a.png#clientId=ude024fc4-380f-4&from=paste&height=893&id=u2439d332&originHeight=1786&originWidth=3580&originalType=binary&ratio=2&rotation=0&showTitle=false&size=5320998&status=done&style=none&taskId=u534cd37f-6b4a-4a56-bce5-ad6906be4db&title=&width=1790)
 
 ## 使用文档
