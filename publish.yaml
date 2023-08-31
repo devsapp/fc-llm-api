@@ -3,7 +3,7 @@ Type: Application
 Name: fc-llm-api
 Provider:
   - 阿里云
-Version: 0.0.2
+Version: 0.0.3
 Description: 部署大语言模型和向量数据库的相关应用到函数计算，向量计算与存储由RDS PostgreSQL提供支持
 HomePage: 项目首页地址
 Tags: #标签详情
@@ -22,10 +22,8 @@ Parameters:
       default: cn-hangzhou
       description: 创建应用所在的地区
       enum:
-        - cn-beijing
         - cn-hangzhou
         - cn-shanghai
-        - cn-shenzhen
     llmModel:
       title: 大语言模型
       type: string
