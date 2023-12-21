@@ -7,9 +7,16 @@ vars:
     name: '{{ serviceName }}'
     description: '将开源模型部署到函数计算'
     {{ if roleArn !== '' && roleArn !== undefined }}role: "{{roleArn}}"{{/if}}
-    nasConfig: auto
+    # nasConfig: auto
     # logConfig: auto
     # vpcConfig: auto
+    nasConfig: # NAS配置, 配置后function可以访问指定NAS
+      userId: 10003 # userID, 默认为10003
+      groupId: 10003 # groupID, 默认为10003
+      mountPoints: # 目录配置
+        - serverAddr: '{{ mountPointsServerAddr }}'
+          nasDir: /fc-deploy-service # NAS目录
+          fcDir: /mnt/auto # 函数计算目录
     vpcConfig:
       vpcId: '{{ vpcId }}'
       securityGroupId: '{{ securityGroupId }}'
