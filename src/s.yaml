@@ -9,7 +9,11 @@ vars:
     {{ if roleArn !== '' && roleArn !== undefined }}role: "{{roleArn}}"{{/if}}
     nasConfig: auto
     # logConfig: auto
-    vpcConfig: auto
+    # vpcConfig: auto
+    vpcConfig:
+      vpcId: '{{ vpcId }}'
+      vSwitchIds: auto
+      securityGroupId: auto
     internetAccess: true
 services:
   llm-server:  #容器服务
