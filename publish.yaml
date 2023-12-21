@@ -49,11 +49,29 @@ Parameters:
       default: fc-llm
       pattern: "^[a-zA-Z_][a-zA-Z0-9-_:/.]{0,127}$"
       description: 您可以根据需要设置不同的服务名，同一个服务会共享部分第三方云产品资源
+    mountPointsServerAddr:
+      title: NAS挂载点地址
+      type: string
+      default: ""
+      description: NAS 挂载点地址，可以登录 <a href="https://nasnext.console.aliyun.com" target="_blank">NAS控制台</a> 查看
+      x-nas:
+        denpendency:
+          - region
     vpcId:
       title: VPC Id
       type: string
       default: ""
       description: NAS 挂载点所在 VPC ID, 例如 vpc-bp1lynmabizqdgt4308dt
+    securityGroupId:
+      title: 安全组
+      type: string
+      default: ""
+      description: 安全组
+    vswitchId:
+      title: vswitchId
+      type: string
+      default: ""
+      description: vswitchId
     roleArn:
       title: RAM 角色 ARN
       type: string

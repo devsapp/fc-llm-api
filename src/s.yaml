@@ -12,8 +12,9 @@ vars:
     # vpcConfig: auto
     vpcConfig:
       vpcId: '{{ vpcId }}'
-      vSwitchIds: auto
-      securityGroupId: auto
+      securityGroupId: '{{ securityGroupId }}'
+      vswitchIds:
+        - {{ vswitchId }}
     internetAccess: true
 services:
   llm-server:  #容器服务
