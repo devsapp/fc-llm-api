@@ -15,7 +15,7 @@ vars:
       groupId: 10003 # groupID, 默认为10003
       mountPoints: # 目录配置
         - serverAddr: '{{ mountPointsServerAddr }}'
-          nasDir: /fc-deploy-service # NAS目录
+          nasDir: '/{{ serviceName }}' # NAS目录
           fcDir: /mnt/auto # 函数计算目录
     vpcConfig:
       vpcId: '{{ vpcId }}'
